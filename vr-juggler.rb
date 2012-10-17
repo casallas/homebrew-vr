@@ -6,8 +6,8 @@ class VrJuggler < Formula
   url 'https://code.google.com/p/vrjuggler/', :using => :git, :commit => '2f05d060da0749542daa1fa815bf2f95975052b7'
   version '3.0.0-1'
 
-  depends_on 'boost'
-  depends_on 'cppdom'
+  depends_on 'boost14'
+  depends_on 'jscasallas/vr/cppdom'
   depends_on 'gmtl'
   depends_on 'flagpoll'
   depends_on 'freealut' => :recommended
@@ -27,14 +27,14 @@ class VrJuggler < Formula
     #end
 
     args = ["--prefix=#{prefix}",
-      "--with-boost=#{HOMEBREW_PREFIX}"]
+      "--with-boost="+Formula.factory('boost14').prefix]
 
     if Formula.factory("freealut").installed?
-      args << "--with-alut=#{HOMEBREW_PREFIX}"
+      args << "--with-alut="+Formula.factory('freealut').prefix
     end
 
     if Formula.factory("vrpn").installed?
-      args << "--with-vrpn=#{HOMEBREW_PREFIX}"
+      args << "--with-vrpn="+Formula.factory('vrpn').prefix
     end
 
     #if Formula.factory("omniorb").installed?

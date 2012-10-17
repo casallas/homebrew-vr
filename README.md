@@ -25,7 +25,7 @@ Docs
 What is Homebrew? I just want to install vr-jugglua
 ---------------------------------------------------
 
-OK, just download and execute [this file](https://raw.github.com/gist/3903921/4c40c1d32643fa61ad79619f25378ae101ebcef2/vr-jugglua-install.sh).
+OK, just download and execute [this file](https://raw.github.com/gist/3903921/vr-jugglua-install.sh).
 It might take a while (I would say 2 hours) for it to compile and install all the dependencies, but it should work.
 
 If you are curious, this script does the following:
@@ -36,6 +36,10 @@ If you are curious, this script does the following:
 # Install homebrew
 ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 
+# Add brew to your path
+echo "# Prepend homebrew bins to your PATH" >> ~/.bash_profile
+echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/Library/Contributions/examples:$PATH" >> ~/.bash_profile
+
 # Tap jscasallas/vr
 brew tap jscasallas/vr
 
@@ -43,5 +47,9 @@ brew tap jscasallas/vr
 brew install vr-jugglua
 
 # Link NavTestbed.app to /Applications
-ln -s `brew --prefix vr-jugglua`/NavTestbed.app
+ln -s `brew --prefix vr-jugglua`/NavTestbed.app /Applications
 ```
+
+This will create a symlink of NavTestbed.app on your Applications folder, so you can run it from your dock.
+The "real" NavTestbed.app, and all of vr-jugglua's examples, config files, etc, will be at 
+`/usr/local/opt/vr-jugglua` in case you ever need them.

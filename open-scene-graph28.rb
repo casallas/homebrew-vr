@@ -15,7 +15,7 @@ class OpenSceneGraph28 < Formula
   depends_on 'gdal' => :optional
   depends_on 'jasper' => :optional
   depends_on 'openexr' => :optional
-  depends_on 'collada' => :optional
+  depends_on 'collada-dom' => :optional
   depends_on 'dcmtk' => :optional
   depends_on 'librsvg' => :optional
 
@@ -29,7 +29,7 @@ class OpenSceneGraph28 < Formula
       args << "-DCMAKE_OSX_ARCHITECTURES=i386"
     end
 
-    if Formula.factory('collada').installed?
+    if Formula.factory('collada-dom').installed?
       args << "-DCOLLADA_INCLUDE_DIR=#{HOMEBREW_PREFIX}/include/collada-dom"
     end
 

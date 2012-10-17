@@ -1,8 +1,8 @@
 require 'formula'
 
 class OpenSceneGraph28 < Formula
-  url 'https://github.com/rpavlik/osg/zipball/new-wrappers'
-  md5 'ce07791af341c28e60c01f37ecfe61d4'
+  url 'https://github.com/rpavlik/osg/tarball/9299d6936cbe54b481dfb45e49ad79682e18d991'
+  sha1 'fc0b5269805c43ab295bd8a9f130e3121cf43c48'
   version '2.8.6'
   homepage 'http://www.openscenegraph.org/'
 
@@ -11,13 +11,16 @@ class OpenSceneGraph28 < Formula
   depends_on 'cmake' => :build
   depends_on 'jpeg'
   depends_on 'wget'
-  #depends_on 'ffmpeg' => :optional
+  #depends_on 'ffmpeg' => :optional #osgdb_ffmpeg doesn't build right with new ffmpeg versions
   depends_on 'gdal' => :optional
   depends_on 'jasper' => :optional
   depends_on 'openexr' => :optional
   depends_on 'collada-dom' => :optional
-  depends_on 'dcmtk' => :optional
+  #depends_on 'dcmtk' => :optional
   depends_on 'librsvg' => :optional
+
+  conflicts_with 'dcmtk',
+    :because => "The osgdb_dicom plugin doesn't build right with new dcmtk versions"
 
   def install
     args = ["..", "-DCMAKE_INSTALL_PREFIX='#{prefix}'", "-DCMAKE_BUILD_TYPE=None", "-Wno-dev", "-DBUILD_OSG_WRAPPERS=ON", "-DBUILD_DOCUMENTATION=ON"]

@@ -6,14 +6,14 @@ an alternative version of cppdom (that requires boost 1.49 specifically).
 
 How do I install these formulae?
 --------------------------------
-Just `brew tap jscasallas/vr` and then `brew install <formula>`.
+Just `brew tap casallas/vr` and then `brew install <formula>`.
 
-If the formula conflicts with one from mxcl/master or another tap, you can `brew install jscasallas/vr/<formula>`.
+If the formula conflicts with one from mxcl/master or another tap, you can `brew install casallas/vr/<formula>`.
 
 You can also install via URL:
 
 ```
-brew install https://raw.github.com/jscasallas/homebrew-vr/master/<formula>.rb
+brew install https://raw.github.com/casallas/homebrew-vr/master/<formula>.rb
 ```
 
 Docs
@@ -25,7 +25,7 @@ Docs
 What is Homebrew? I just want to install vr-jugglua
 ---------------------------------------------------
 
-OK, just download and execute [this file](https://raw.github.com/gist/3903921/vr-jugglua-install.sh).
+OK, just download and execute [this file](https://gist.githubusercontent.com/casallas/3903921/raw/vr-jugglua-install.sh).
 It might take a while (I would say 2 hours) for it to compile and install all the dependencies, but it should work.
 
 If you are curious, this script does the following:
@@ -40,8 +40,8 @@ ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 echo "# Prepend homebrew bins to your PATH" >> ~/.bash_profile
 echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/Library/Contributions/examples:$PATH" >> ~/.bash_profile
 
-# Tap jscasallas/vr
-brew tap jscasallas/vr
+# Tap casallas/vr
+brew tap casallas/vr
 
 # Install vr-jugglua
 brew install vr-jugglua

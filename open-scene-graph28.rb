@@ -32,8 +32,8 @@ class OpenSceneGraph28 < Formula
       args << "-DCMAKE_OSX_ARCHITECTURES=i386"
     end
 
-    if Formula.factory('collada-dom').installed?
-      args << "-DCOLLADA_INCLUDE_DIR=#{HOMEBREW_PREFIX}/include/collada-dom"
+    if build.with? "collada-dom"
+      args << "-DCOLLADA_INCLUDE_DIR=#{Formula["collada-dom"].opt_include}/collada-dom"
     end
 
     Dir.mkdir "build"

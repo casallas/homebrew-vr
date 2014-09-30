@@ -1,8 +1,8 @@
 require 'formula'
 
 class OpenSceneGraph28 < Formula
-  url 'https://github.com/rpavlik/osg/tarball/9299d6936cbe54b481dfb45e49ad79682e18d991'
-  sha1 'fc0b5269805c43ab295bd8a9f130e3121cf43c48'
+  url 'https://github.com/casallas/osg/tarball/3743ee6967864a1fcef4a363e52b68356b116ce6'
+  sha1 '83d20a151a1ab1ead0e49415ed54e9cccf8c0d24'
   version '2.8.6'
   homepage 'http://www.openscenegraph.org/'
 

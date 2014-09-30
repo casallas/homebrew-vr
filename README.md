@@ -1,8 +1,7 @@
 Homebrew-VR
 ==============
 These are Virtual Reality formulae for Homebrew. They include vr-juggler, vr-jugglua,
-an older version of osg (osg28, needed for vr-jugglua), an older version of boost (1.49, needed for cppdom) and
-an alternative version of cppdom (that requires boost 1.49 specifically).
+and an older version of osg (osg28, needed for vr-jugglua).
 
 How do I install these formulae?
 --------------------------------

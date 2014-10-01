@@ -2,9 +2,9 @@ require 'formula'
 
 class VrJugglua < Formula
   homepage 'https://github.com/vancegroup/vr-jugglua'
-  head 'https://github.com/vancegroup/vr-jugglua.git'
-  url 'https://github.com/vancegroup/vr-jugglua.git', :commit => 'cecdebd2e86d3e89ae82305ace6ba0922a30c05f'
-  version '1.0.6' # Guessed, since there's no official version
+  head 'https://github.com/casallas/vr-jugglua.git', :commit => 'a4c224668bbf611410e0faa5e5ca6d989e148a8a'
+  url 'https://github.com/casallas/vr-jugglua.git', :branch => 'patch-1'
+  version '2.0.0'
 
   depends_on 'cmake' => :build
   depends_on 'boost'
@@ -13,6 +13,8 @@ class VrJugglua < Formula
   depends_on 'qt'
 
   def install
+    inreplace 'CMakeLists.txt', '3.0 EXACT REQUIRED', ''
+
     args = std_cmake_args
     # Don't bundle dependent libraries, they should be in our system anyways
     args << "-DINSTALL_LIBRARIES_BUNDLE=OFF"

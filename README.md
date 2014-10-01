@@ -32,8 +32,8 @@ If you are curious, this script does the following:
 ```sh
 #!/bin/bash
 
-# Install homebrew
-ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+# Install homebrew (taken from http://brew.sh/)
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Add brew to your path
 echo "# Prepend homebrew bins to your PATH" >> ~/.bash_profile

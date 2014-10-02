@@ -9,7 +9,7 @@ class VrJuggler <Formula
   depends_on 'cmake' => :build
   depends_on 'boost'
   depends_on 'cppdom'
-  depends_on 'gmtl'
+  depends_on 'casallas/vr/gmtl'
   depends_on 'flagpoll'
   depends_on 'freealut' => :recommended
   depends_on 'vrpn' => :recommended

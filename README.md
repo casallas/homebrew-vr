@@ -42,6 +42,9 @@ echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/Library/Contribution
 # Tap casallas/vr
 brew tap casallas/vr
 
+# Update homebrew just in case
+brew update
+
 # Install vr-jugglua
 brew install vr-jugglua
 

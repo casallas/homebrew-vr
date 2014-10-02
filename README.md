@@ -1,6 +1,6 @@
 Homebrew-VR
 ==============
-These are Virtual Reality formulae for Homebrew. They include vr-juggler, vr-jugglua,
+These are Virtual Reality formulae for Homebrew. They include vr-juggler, vr-jugglua, a patched version of gmtl,
 and an older version of osg (osg28, needed for vr-jugglua).
 
 How do I install these formulae?
@@ -52,3 +52,8 @@ ln -s `brew --prefix vr-jugglua`/NavTestbed.app /Applications
 This will create a symlink of NavTestbed.app on your Applications folder, so you can run it from your dock.
 The "real" NavTestbed.app, and all of vr-jugglua's examples, config files, etc, will be at 
 `/usr/local/opt/vr-jugglua` in case you ever need them.
+
+Troubleshooting
+---------------
+
+If something goes wrong try `brew update`, and then `brew install vr-jugglua` again. If that doesn't help run `brew install -v vr-jugglua`, open an issue, and paste the output from your console output.

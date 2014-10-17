@@ -1,7 +1,11 @@
 Homebrew-VR
 ==============
-These are Virtual Reality formulae for Homebrew. They include vr-juggler, vr-jugglua, a patched version of gmtl,
-and an older version of osg (osg28, needed for vr-jugglua).
+These are Virtual Reality formulae for Homebrew. They include:
+- [vr-jugglua patched for Mac](https://github.com/casallas/vr-jugglua)
+  - [vr-juggler 3, CMake Version patched for Mac](https://github.com/casallas/vrjuggler-1)
+    - [flagpoll](https://code.google.com/p/flagpoll/)
+    - [gmtl](http://ggt.sourceforge.net/), [patched for Mac](https://gist.githubusercontent.com/anonymous/c16cad998a4903e6b3a8/raw/e4669b3df0e14996c7b7b53937dd6b6c2cbc7c04/gmtl_Sconstruct.diff)
+  - [osg 2.8.6 patched for Mac](https://github.com/casallas/osg), this is the last osg version to include osgIntrospection, needed for osgLua, and thence vr-jugglua.
 
 How do I install these formulae?
 --------------------------------

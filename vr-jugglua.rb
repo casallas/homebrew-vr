@@ -12,7 +12,11 @@ class VrJugglua < Formula
   depends_on 'vr-juggler'
   depends_on 'qt'
 
+  #TODO really vr-jugglua should depend on the local libraries rather than the bundled ones
+  keg_only "VR Jugglua Installs its own lua, and luabind, which conflict with homebrew's"
+
   def install
+    # Our version of vr juggler isn't recognized by CMake
     inreplace 'CMakeLists.txt', '3.0 EXACT REQUIRED', ''
 
     args = std_cmake_args
@@ -21,15 +25,6 @@ class VrJugglua < Formula
     mkdir 'build' do
       system "cmake", "..", *args
       system "make install"
-      # Avoid conflicts with lua
-      #TODO really vr-jugglua should depend on local lua rather than on bundled one
-      if Formula.factory('lua').installed?
-        rm_rf bin/'luac'
-        rm_rf lib/'liblua.a'
-        rm_rf include/'lauxlib.h'
-        rm_rf include/'lua.h'
-        rm_rf include/'lualib.h'
-      end
     end
   end
 end

@@ -7,7 +7,7 @@ How do I install these formulae?
 --------------------------------
 Just `brew tap casallas/vr` and then `brew install <formula>`.
 
-If the formula conflicts with one from mxcl/master or another tap, you can `brew install casallas/vr/<formula>`.
+If the formula conflicts with one from Homebrew/homebrew/master or another tap, you can `brew install casallas/vr/<formula>`.
 
 You can also install via URL:
 
@@ -19,7 +19,7 @@ Docs
 ----
 `brew help`, `man brew`, or the Homebrew [wiki][].
 
-[wiki]:http://wiki.github.com/mxcl/homebrew
+[wiki]:http://wiki.github.com/Homebrew/homebrew
 
 What is Homebrew? I just want to install vr-jugglua
 ---------------------------------------------------
@@ -41,6 +41,9 @@ echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/Library/Contribution
 
 # Tap casallas/vr
 brew tap casallas/vr
+
+# Update homebrew just in case
+brew update
 
 # Install vr-jugglua
 brew install vr-jugglua
